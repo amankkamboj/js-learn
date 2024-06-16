@@ -40,6 +40,25 @@ const course = {
 
 const {courseInstructor} =course;
 const {courseInstructor: instructor} = course;
-console.log(courseInstructor);
+// console.log(courseInstructor);
 
-console.log(instructor);
+// console.log(instructor);
+
+function demoW(pram1,pram2){
+        // body of function
+}
+
+// demoW(argument1,argument2);
+
+ // Reset operator or spread operator
+ // It is used when we don't  know how many params or argument will be passed in a function so we use reset operator to handel those prams in the array like in below example
+
+ function calculateCartPrice(...price){
+        return price
+ }
+ function calculateCartPrice2(val1,val2,...price){
+        return price
+ }
+ console.log( calculateCartPrice(200,300,400) );
+
+
