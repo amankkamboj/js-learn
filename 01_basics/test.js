@@ -96,14 +96,14 @@ const user = {
 
 // Immediately Invoked Function Expressions (IIFE)
 
-(function AmanDev(){
-        console.log('DB CONNECTED');
-})(); //Always end IIFE
+// (function AmanDev(){
+//         console.log('DB CONNECTED');
+// })(); //Always end IIFE
 // From global scope polution we IIFE
 
-( (uname) => {
-        console.log(`DB CONNECTED 2 ${uname}`)
-})("Aman");
+// ( (uname) => {
+//         console.log(`DB CONNECTED 2 ${uname}`)
+// })("Aman");
 
 /*
 1.JS creates Global excution context 
@@ -127,3 +127,32 @@ browser > inspect > Sources
 create a snippet with few functions and visually experience the call stack.
 
 correct me if there are any mistakes or add to this if something is missing. */
+
+// Truthy and falsy values
+
+// Falsy values
+// false, 0, -0, BigInt 0n, "", null, undefined, NaN
+// Except from falsy values all are truthy
+// truthy values
+// "0",'false', " ", [], {}, function(){}, 
+
+// Check array 
+// const ArrData = [];
+// if(ArrData.length===0){
+//         console.log("Array is empty");
+// }
+// Check object
+const ObjData = {};
+// if(Object.keys(ObjData).length ===0){
+//         console.log("Object is empty");
+// }
+
+// Nullish Coalescing Operator (??): null undefined
+// let val1;
+// // val1 = 5 ?? 10
+// val1 = null ?? 12;
+// console.log(val1);
+
+// Ternairy operator
+
+// condition ? true : false
