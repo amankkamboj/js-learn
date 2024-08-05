@@ -40,7 +40,7 @@
                 console.log(data);
                 const profile = document.querySelector(".profile");
                 const div = document.createElement("div");
-                div.innerHTML = `<h2>${data.name}</h2><img src="${data.avatar_url}" ><p>${data.bio}</p>`;
+                div.innerHTML = `<h2>${data.name}</h2><img src="${data.avatar_url}" ><p>${data.bio}</p><p><label>Followers : </label>${data.followers}</p>`;
                 profile.append(div);
             }
         }
