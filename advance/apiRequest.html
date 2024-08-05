@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request Demo</title>
+</head>
+<body>
+    <div>
+        <ol>
+            <li>
+                UNSENT	Client has been created. open() not called yet.
+            </li>
+            <li>
+                OPENED	open() has been called.
+            </li>
+            <li>
+                HEADERS_RECEIVED	send() has been called, and headers and status are available.
+            </li>
+            <li>
+                LOADING	Downloading; responseText holds partial data.
+            </li>
+            <li>
+                DONE	The operation is complete.
+            </li>
+        </ol>
+    </div>
+    <div class="profile">
+
+    </div>
+    <script>
+        const requestUrl = 'https://api.github.com/users/amankkamboj'
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestUrl)
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState);
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(this.responseText)
+                console.log(typeof data);
+                console.log(data);
+                const profile = document.querySelector(".profile");
+                const div = document.createElement("div");
+                div.innerHTML = `<h2>${data.name}</h2><img src="${data.avatar_url}" ><p>${data.bio}</p>`;
+                profile.append(div);
+            }
+        }
+        xhr.send();
+    </script>
+    
+</body>
+</html>

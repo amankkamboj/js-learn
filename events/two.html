@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - time functions</title>
+</head>
+<body>
+    <h2>Aman Time event practice</h2>
+    <button id="stop">Stop</button>
+    <script>
+        const changeMe = setTimeout(()=>{
+            console.log("Hi aman")
+            document.querySelector("h2").innerHTML="Powered by Chai Our Code.. Best Js tutorials"
+        },2000)
+        document.querySelector("#stop").addEventListener("click",()=>{
+         clearTimeout(changeMe);
+         console.log("Stopped"); 
+        })
+    </script>
+</body>
+</html>

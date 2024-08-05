@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - time functions</title>
+</head>
+<body>
+    <h2>Chai our code Js practice</h2>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+    <script>
+        const sayHello = (str)=>{
+            console.log(str,Date.now());
+        }
+        let startInterval = "";
+        document.querySelector("#start").addEventListener("click",()=>{
+            startInterval = setInterval(sayHello,1000,"Aman")
+        })
+        document.querySelector("#stop").addEventListener("click",()=>{
+            clearInterval(startInterval)
+            console.log("Stoped");
+        })
+    </script>
+</body>
+</html>
